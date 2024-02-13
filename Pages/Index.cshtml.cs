@@ -16,5 +16,58 @@ namespace AI_SMS_Student_Help.Pages
         {
 
         }
+
+        protected void Login_Click(object sender, EventArgs e)
+
+        {
+            // Still need to match this to user input
+            //string email = Email.Value;
+
+            //string password = Password.Value;
+
+
+
+            // Add your logic here to authenticate the user 
+
+            // For example, check the provided credentials against a database 
+
+
+/*
+            if (IsValidUser(email, password))
+
+            {
+
+                // Redirect to another page if login is successful 
+
+                Response.Redirect("Dashboard.aspx");
+
+            }
+
+            else
+
+            {
+
+                // Show an error message 
+
+                // You can add a label to your .aspx page to show the error 
+
+            }
+*/
+        }
+
+
+
+        private bool IsValidUser(string email, string password)
+
+        {
+
+            // Placeholder for actual authentication logic 
+
+            return true;
+
+        }
+
     }
-}
+
+} 
+    
