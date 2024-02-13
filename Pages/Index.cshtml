@@ -4,7 +4,70 @@
     ViewData["Title"] = "Home page";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+    <title>Faculty Portal</title>
+
+    <link rel="stylesheet" type="text/css" href="~/css/loginPage.css" />
+
+</head>
+
+<body>
+
+    <div class="login-container">
+
+        <div class="login-logo">
+
+            <img src="Images/screaming-eagles-logo.png" alt="Southern Indiana Screaming Eagles">
+
+            <h2>Chat-Bot Solution</h2>
+
+        </div>
+
+        <div class="login-form">
+
+            <h1>Faculty Portal</h1>
+
+            <form id="form1" runat="server">
+
+                <div>
+
+                    <label for="Email">Email address</label>
+
+                    <input type="text" id="Email" runat="server" />
+
+                </div>
+
+                <div>
+
+                    <label for="Password">Password</label>
+
+                    <input type="password" id="Password" runat="server" />
+
+                </div>
+
+                <div>
+
+                    <button type="submit" runat="server" onserverclick="Login_Click">Login to Continue</button>
+
+                </div>
+
+                <div class="login-footer">
+
+                    Don't have an account? <a href="SignUp.aspx">Sign up</a>
+
+                </div>
+
+            </form>
+
+        </div>
+
+    </div>
+
+</body>
+
+</html> 
