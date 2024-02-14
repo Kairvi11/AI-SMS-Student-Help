@@ -1,0 +1,75 @@
+﻿@page
+@model AI_SMS_Student_Help.Pages.RegisterModel
+@{
+    ViewData["Title"] = "Registration page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Registration</h1>
+    <p>Please enter your information below to create an account and use the application...</p>
+</div>
+
+@*adds in photo for use in background...*@
+
+<style>
+    .right{
+        position: absolute;
+        right: 0px;
+        width: 300px;
+        border: 3px solid #73AD21;
+        padding: 10px;
+    }
+
+    .flex-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    /* Create two unequal columns that sits next to each other */
+    /* Sidebar/left column */
+    .side {
+        flex: 70%;
+        background-color: white;
+        padding: 20px;
+        justify-content: center;
+    }
+
+    /* Main column */
+    .main {
+        flex: 30%;
+        background-color: white;
+        padding: 20px;
+        justify-content: center;
+    }
+
+</style>
+
+<div class="row">
+    <div class="side">
+        <img src="~/Images/Screenshot_20240213_233129_Chrome.jpg" alt="sample photo" />
+    </div>
+    <div class="main">
+        <form method="post">
+            @*allows user to enter a username...*@
+            <label for="username">Username:</label>
+            <input type="text" name="username">
+            <input type="submit">
+        </form>
+        <form method="post">
+            @*allows user to enter their email...*@
+            <label for="email">Email:</label>
+            <input type="email" name="emailaddress">
+            <input type="submit">
+        </form>
+        <form method="post">
+            @*allows user to enter a password...*@
+            <label for="password">Password:</label>
+            <input type="password" name="password">
+            <input type="submit">
+        </form>
+    </div>
+</div>
+
+<div class="flex-container">
+</div>
