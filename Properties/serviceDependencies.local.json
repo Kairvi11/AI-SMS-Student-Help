@@ -10,6 +10,14 @@
       "type": "mssql.azure",
       "connectionId": "ConnectionStrings:Portal",
       "dynamicId": null
+    },
+    "storage1": {
+      "serviceConnectorResourceId": "/subscriptions/[parameters('subscriptionId')]/resourceGroups/[parameters('resourceGroupName')]/providers/Microsoft.ServiceLinker/locations/eastus/connectors/azureStorage_D77361D2BA",
+      "secretStore": "LocalSecretsFile",
+      "resourceId": "/subscriptions/[parameters('subscriptionId')]/resourceGroups/[parameters('resourceGroupName')]/providers/Microsoft.Storage/storageAccounts/aismschatbot",
+      "type": "storage.azure",
+      "connectionId": "azureStorage",
+      "dynamicId": null
     }
   }
 }
