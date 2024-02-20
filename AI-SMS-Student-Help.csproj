@@ -8,7 +8,15 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Content Remove="Pages\AddClass.cshtml" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Folder Include="View\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="Pages\AddClass.cshtml" />
   </ItemGroup>
 
 </Project>
