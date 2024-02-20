@@ -1,0 +1,33 @@
+﻿@page
+@model AI_SMS_Student_Help.Pages.EditProfilModel
+@{
+}
+<html>
+<head>
+    <title>Edit Profile</title>
+</head>
+<body>
+    <h1>Edit Profile</h1>
+    <form>
+        <label for="fname">First Name:</label><br>
+        <input type="text" id="fname" name="fname"><br>
+        <label for="lname">Last Name:</label><br>
+        <input type="text" id="lname" name="lname"><br>
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email"><br>
+        <label for="username">Username:</label><br>
+        <input type="text" id="username" name="username"><br>
+        <label for="phone">Phone Number:</label><br>
+        <input type="tel" id="phone" name="phone"><br>
+        <label for="department">Department:</label><br>
+        <select id="department" name="department">
+            <option value="sales">Sales</option>
+            <option value="marketing">Marketing</option>
+            <option value="engineering">Engineering</option>
+            <!-- Add more options as needed -->
+        </select><br>
+        <input type="button" value="Cancel">
+        <input type="submit" value="Save">
+    </form>
+</body>
+</html>
