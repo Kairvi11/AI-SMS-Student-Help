@@ -1,0 +1,104 @@
+﻿@page
+@model AI_SMS_Student_Help.Pages.HomePageModel
+@{
+}
+<head>
+
+    <link rel="stylesheet" href="~/css/Classpage.css">
+</head>
+
+<body>
+    <section class="yes">
+        <script>
+            function btnMenu() { alert("hello"); }
+            function toggle(source) {
+                const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+                for (const checkbox of checkboxes) {
+                    checkbox.checked = source.checked;
+                }
+            }
+        </script>
+
+        <h3>
+            My Classes
+            <button id="btnAddClass" onClick="btnMenu()">Add Class</button>
+            <button id="btnFilter"> Filter</button>
+            <button id="btnDelete">Delete </button>
+
+        </h3>
+        <hr />
+        <table>
+
+            <tr>
+                <th><input type="checkbox" id="vehicle1" name="vehicle1" value="Bike" onclick="toggle()"></th>
+                <th>Class Id</th>
+                <th>Professor</th>
+                <th>Type</th>
+                <th>Semester</th>
+                <th>Department</th>
+                <th>Status</th>
+                <th>Syllabus</th>
+            </tr>
+
+            <tr>
+
+                <td><input type="checkbox" id="vehicle1" name="vehicle1" value="Bike"></td>
+                <td>Class 504</td>
+                <td>Dr. dadsdsad</td>
+                <td>In-person</td>
+                <td>Spring 2024</td>
+                <td>Computer Science</td>
+                <td class="Active">Active</td>
+                <td>CS 458.PDF</td>
+            </tr>
+
+            <tr>
+
+                <td><input type="checkbox" id="vehicle1" name="vehicle1" value="Bike"></td>
+                <td>Class 504</td>
+                <td>Dr. dadsdsad</td>
+                <td>In-person</td>
+                <td>Spring 2024</td>
+                <td>Computer Science</td>
+                <td class="Inactive">Inactive</td>
+                <td>CS 458.PDF</td>
+            </tr>
+
+            <!--  <tr>
+                   <td><input type="checkbox" id="vehicle1" name="vehicle1" value="Bike"></td>
+                   <td>Sep 20, 2017</td>
+                   <td>George hegel</td>
+                   <td>Germany</td>
+                   <td><progress max="100" value="100">100%</progress></td>
+                   <td class="Active">Shipped</td>
+               </tr>
+
+               <tr>
+                   <td><input type="checkbox" id="vehicle1" name="vehicle1" value="Bike"></td>
+                   <td>Oct 3, 2017</td>
+                   <td>John Locke</td>
+                   <td>England</td>
+                   <td><progress max="100" value="60">60%</progress></td>
+                   <td class="Inactive">Processing</td>
+               </tr>
+
+               <tr>
+                   <td><input type="checkbox" id="vehicle1" name="vehicle1" value="Bike"></td>
+                   <td>Oct 6, 2017</td>
+                   <td>Thomas Hobbes</td>
+                   <td>England</td>
+                   <td><progress max="100" value="20">20%</progress></td>
+                   <td class="pending">Pending</td>
+               </tr>
+
+               <tr>
+                   <td><input type="checkbox" id="vehicle1" name="vehicle1" value="Bike"></td>
+                   <td>Oct 10, 2017</td>
+                   <td>Thomas Hobbes</td>
+                   <td>England</td>
+                   <td><progress max="100" value="20">20%</progress></td>
+                   <td class="pending">Pending</td>
+               </tr>-->
+        </table>
+    </section>
+</body>

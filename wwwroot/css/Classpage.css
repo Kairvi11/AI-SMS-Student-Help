@@ -1,0 +1,134 @@
+﻿/* general text formatting */
+
+
+body {
+    font-family: "Roboto", Verdana, Arial, sans-serif;
+    font-size: 100%;
+    background-color: white;
+}
+
+nav {
+    display: inline;
+}
+
+#btnDelete {
+    width: 80px;
+    height: 30px;
+    float: right;
+    margin-left: 2%;
+    margin-right: 2%;
+    margin-top: 1%;
+    background-color: black;
+    font-size: 10px;
+    color: white;
+}
+
+#btnAddClass {
+    width: 150px;
+    height: 30px;
+    float: right;
+    margin-left: 2%;
+    margin-right: 2%;
+    margin-top: 1%;
+    background-color: red;
+    font-size: 10px;
+    color: white;
+}
+
+#btnFilter {
+    width: 80px;
+    height: 30px;
+    float: right;
+    margin-left: 2%;
+    margin-right: 2%;
+    margin-top: 1%;
+    background-color: Green;
+    font-size: 10Px;
+    color: white;
+}
+
+
+#btnSelectAll {
+    width: 5%;
+    height: 5%;
+    background-color: red;
+}
+
+
+section {
+    background-color: crimson;
+    margin: 1em 4em 1em 4em;
+    border: solid 1pt black;
+}
+
+h3 {
+    color: White;
+    padding: 0.75rem;
+    margin-bottom: 0;
+    background-color: #2C4B7A;
+}
+
+hr {
+    padding: 0;
+    margin: 0;
+}
+
+.status {
+    border-radius: 0.25rem;
+    padding: 3px;
+    color: white;
+}
+
+/* table formatting */
+
+table {
+    margin: 0.5em auto;
+    width: 90%;
+    color: #666;
+    font-size: 0.85em;
+}
+
+    table caption {
+        background-color: #607D8B;
+        color: white;
+        font-size: 1em;
+        padding: 0.5rem;
+        text-align: center;
+    }
+
+tr {
+    padding: 0.75rem;
+}
+
+td, th {
+    padding: 0.75rem;
+    text-align: left;
+    color: white;
+}
+
+th {
+    font-size: 1.2em;
+}
+
+#btnTH {
+    width: 2%;
+    height: 2%;
+}
+
+.Active {
+    padding: 0.75rem;
+    text-align: left;
+    background-color: green;
+}
+
+.Inactive {
+    padding: 0.75rem;
+    text-align: left;
+    background-color: slategrey;
+}
+
+.Unkown {
+    padding: 0.75rem;
+    text-align: left;
+    background-color: red;
+}
