@@ -9,11 +9,11 @@
     width: 100%;
     height: 100%;
     z-index: -1;
-    background-image: url('../images/usiwalpapaer.jpg');
+    background-image: url('../images/USIbackground.jpeg');
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    opacity: 0.9;
+    opacity: 0.2;
     /* Sidebar styles */
     /*.sidebar {
     height: 100%;
