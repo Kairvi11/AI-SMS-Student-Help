@@ -17,6 +17,43 @@ html {
   min-height: 100%;
 }
 
-body {
-  margin-bottom: 60px;
+.login-card label {
+    display: block;
+    margin-bottom: 5px;
 }
+
+.login-card input[type="text"],
+.login-card input[type="password"] {
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    padding: 5px;
+    width: 100%;
+}
+
+.login-card button[type="submit"] {
+    border-radius: 5px;
+    background-color: #2C4B7A;
+    color: #fff;
+    padding: 5px 10px;
+    border: none;
+    cursor: pointer;
+}
+
+.forgot-password-button {
+    border-radius: 5px;
+    background-color: transparent;
+    border: 1px solid #ccc;
+    color: #2C4B7A;
+    padding: 5px 10px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.create-account-text {
+    font-size: 14px;
+}
+.navbar-custom {
+    background-color: #2C4B7A;
+}
+
+
