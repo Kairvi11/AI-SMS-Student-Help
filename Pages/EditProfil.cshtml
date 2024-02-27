@@ -1,0 +1,65 @@
+﻿@page
+@model AI_SMS_Student_Help.Pages.EditProfilModel
+@{
+}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Profile</title>
+    <link rel="stylesheet" type="text/css" href="~/css/EditProfile.css">
+</head>
+<body>
+
+  @*   <div class="sidebar">
+        <a href="#">My Account</a>
+        <a href="#">My Classes</a>
+    </div> *@
+
+    <div class="content">
+        <div class="Edit-card">
+        <h2>Edit Profile</h2>
+       
+
+        <form action="/submit_form" method="post">
+
+            <!-- First Name -->
+            <label for="fname">First Name:</label><br>
+            <input type="text" id="fname" name="fname"><br><br>
+
+            <!-- Last Name -->
+            <label for="lname">Last Name:</label><br>
+            <input type="text" id="lname" name="lname"><br><br>
+
+            <!-- Email -->
+            <label for="email">Email:</label><br>
+            <input type="email" id="email" name="email"><br><br>
+
+            <!-- Username -->
+            <label for="username">Username:</label><br>
+            <input type="text" id="username" name="username"><br><br>
+
+            <!-- Phone Number -->
+            <label for="phone">Phone Number:</label><br>
+            <input type="tel" id="phone" name="phone"><br><br>
+
+            <!-- Department -->
+            <label for="dept">Department:</label><br>
+            <select id="dept" name="dept">
+                <option value="cs">Computer Science</option>
+                <option value="math">Mathematics</option>
+                <option value="bio">Biology</option>
+                <option value="chem">Chemistry</option>
+                <option value="eng">English</option>
+            </select><br><br>
+
+            <!-- Buttons -->
+            <button type="reset" class="cancel">Cancel</button>
+            <button type="submit" class="save">Save</button>
+
+        </form>
+        </div>
+    </div>
+
+</body>
+</html>

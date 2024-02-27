@@ -1,20 +1,69 @@
-html {
-  font-size: 14px;
+@import url('https://fonts.googleapis.com/css2?family=Michroma&display=swap');
+
+
+/*this controls the font on the navbar*/
+.navbar-brand-custom {
+    font-family: 'Michroma', cursive;
+}
+/*This adjust the text"faculty portal"to the left side of the page*/
+.logo-container {
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding-top: 1rem;
+}
+/*increase font for navbar*/
+.home-register-links .nav-link {
+    font-size: 1.2rem !important;
+}
+/*backggorund image of USI */
+.index-background-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
 }
 
-@media (min-width: 768px) {
-  html {
-    font-size: 16px;
-  }
+.index-background-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background-image: url('../images/usiwalpapaer.jpg');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    opacity: 0.9;
+}
+/*contorls the login card on the screen*/
+.login-card {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 10px;
+    width: 400px;
+    text-align: center;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
 }
 
-.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
-  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+.title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
 }
 
-html {
-  position: relative;
-  min-height: 100%;
+.login-card form {
+    width: 100%;
+}
+
+.login-card .form-group {
+    margin-bottom: 20px;
 }
 
 .login-card label {
@@ -55,5 +104,3 @@ html {
 .navbar-custom {
     background-color: #2C4B7A;
 }
-
-
