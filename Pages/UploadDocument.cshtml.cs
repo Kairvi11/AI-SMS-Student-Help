@@ -1,8 +1,7 @@
-using Microsoft.AspNetCore.Http;
+using Azure.Storage.Blobs;
+using System.IO;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
-using System.IO;
-using System.Threading.Tasks;
 
 namespace AI_SMS_Student_Help.Pages
 {
@@ -13,10 +12,7 @@ namespace AI_SMS_Student_Help.Pages
         public UploadDocumentModel(IWebHostEnvironment webHostEnvironment)
         {
             _webHostEnvironment = webHostEnvironment;
-        }
-
-        public void OnGet()
-        {
+            Document = new FormFile(new MemoryStream(), 0, 0, null, string.Empty);
         }
 
         [BindProperty]
@@ -29,16 +25,23 @@ namespace AI_SMS_Student_Help.Pages
                 return Page();
             }
 
-            string uploadsFolder = Path.Combine(_webHostEnvironment.WebRootPath, "uploads");
-            if (!Directory.Exists(uploadsFolder))
+            string connectionString = "DefaultEndpointsProtocol=https;AccountName=aismschatbot;AccountKey=lv3AB/ySWQ/iy3uDJw504AV/vrqAeo+7qNs37kH7QU7+rDu66ELoKBecLJcW2ji5vVhsmsOAe+M5+AStBMEBgQ==;EndpointSuffix=core.windows.net"; // replace with your Azure Storage account connection string
+            string containerName = "aimsblobs";
+
+            BlobServiceClient blobServiceClient = new BlobServiceClient(connectionString);
+            BlobContainerClient containerClient = blobServiceClient.GetBlobContainerClient(containerName);
+
+            if (!containerClient.Exists())
             {
-                Directory.CreateDirectory(uploadsFolder);
+                await containerClient.CreateIfNotExistsAsync();
             }
 
-            string filePath = Path.Combine(uploadsFolder, Document.FileName);
-            using (var stream = new FileStream(filePath, FileMode.Create))
+            BlobClient blobClient = containerClient.GetBlobClient(Document.FileName) ?? throw new Exception("Blob client is null.");
+            using (var stream = new MemoryStream())
             {
                 await Document.CopyToAsync(stream);
+                stream.Position = 0;
+                await blobClient.UploadAsync(stream, true); // true to overwrite the blob if it exists
             }
 
             ViewData["Message"] = $"Document '{Document.FileName}' uploaded successfully!";
