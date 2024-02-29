@@ -2,6 +2,7 @@ using Azure.Storage.Blobs;
 using System.IO;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using AI_SMS_Student_Help.Pages.azurekey;
 
 namespace AI_SMS_Student_Help.Pages
 {
@@ -25,8 +26,7 @@ namespace AI_SMS_Student_Help.Pages
                 return Page();
             }
 
-            string connectionString = "DefaultEndpointsProtocol=https;AccountName=aismschatbot;AccountKey=lv3AB/ySWQ/iy3uDJw504AV/vrqAeo+7qNs37kH7QU7+rDu66ELoKBecLJcW2ji5vVhsmsOAe+M5+AStBMEBgQ==;EndpointSuffix=core.windows.net"; // replace with your Azure Storage account connection string
-            string containerName = "aimsblobs";
+            
 
             BlobServiceClient blobServiceClient = new BlobServiceClient(connectionString);
             BlobContainerClient containerClient = blobServiceClient.GetBlobContainerClient(containerName);
