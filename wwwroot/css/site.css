@@ -52,6 +52,8 @@
     transform: translate(-50%, -50%);
 }
 
+
+
 .title {
     font-size: 24px;
     font-weight: bold;
@@ -103,4 +105,49 @@
 }
 .navbar-custom {
     background-color: #2C4B7A;
+}
+/* Het Patel */
+.div {
+    color: #FFFCFC;
+    font-size: 20px;
+    font-family: Inter;
+    font-weight: 700;
+    line-height: 20px;
+    word-wrap: break-word;
+}
+
+/* My Classes */
+.div {
+    color: #F6F6F6;
+    font-size: 24px;
+    font-family: Inter;
+    font-weight: 400;
+    word-wrap: break-word;
+}
+
+/* My Account */
+.div {
+    color: #F6F6F6;
+    font-size: 24px;
+    font-family: Inter;
+    font-weight: 400;
+    word-wrap: break-word;
+}
+
+/* Cancel */
+div {
+    color: #2C4B7A;
+    font-size: 28px;
+    font-family: Roboto;
+    font-weight: 400;
+    word-wrap: break-word;
+}
+
+/* Save */
+div {
+    color: white;
+    font-size: 28px;
+    font-family: Roboto;
+    font-weight: 600;
+    word-wrap: break-word;
 }
