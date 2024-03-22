@@ -3,11 +3,11 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 
 namespace AI_SMS_Student_Help.Pages
 {
-    public class EditProfilModel : PageModel
+    public class AddClassModel : PageModel
     {
-        private readonly ILogger<EditProfilModel> _logger;
+        private readonly ILogger<AddClassModel> _logger;
 
-        public EditProfilModel(ILogger<EditProfilModel> logger)
+        public AddClassModel(ILogger<AddClassModel> logger)
         {
             _logger = logger;
         }

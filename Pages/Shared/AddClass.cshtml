@@ -1,0 +1,68 @@
+﻿@page
+@model AI_SMS_Student_Help.Pages.AddClassModel
+@{
+}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add a Class</title>
+    <link rel="stylesheet" type="text/css" href="@Url.Content(" ~ /css/AddClass.css")">
+
+</head>
+<body>
+
+  @*   <div class="sidebar">
+        <a href="#">My Account</a>
+        <a href="#">My Classes</a>
+    </div> *@
+
+    <div class="content">
+        <h2>Add a Class</h2>
+        <div class="Info">
+        <form action="/submit_form" method="post">
+
+            <!-- Course ID -->
+            <label for="course_id">Course ID:</label><br>
+            <input type="text" id="course_id" name="course_id"><br><br>
+
+            <!-- Name -->
+            <label for="name">Name:</label><br>
+            <input type="text" id="name" name="name"><br><br>
+
+            <!-- Semester -->
+            <label for="sem">Semester:</label><br>
+            <input type="text" id="sem" name="sem"><br><br>
+
+            <!-- Taught by -->
+            <label for="by_id">Taught by:</label><br>
+            <input type="text" id="by_id" name="by_id"><br><br>
+
+            <!-- Type -->
+            <label for="typ">Type:</label><br>
+             <select id="stat" name="stat">
+                <option value="onl">Online</option>
+                <option value="hybrid">Hybrid</option>
+                <option value="ip">In Person</option>
+            </select><br><br>
+
+            <!-- Status -->
+            <label for="stat">Status:</label><br>
+            <select id="stat" name="stat">
+                <option value="Ina">Inactive</option>
+                <option value="act">Active</option>
+            </select><br><br>
+
+            <!-- Buttons -->
+            <button type="reset" class="cancel">Cancel</button>
+            <button type="submit" class="save">Save</button>
+
+            <!-- Upload Document -->
+            <button type="submit" class="uplode">Upload Document</button>
+
+        </form>
+        </div>
+    </div>
+
+</body>
+</html>
