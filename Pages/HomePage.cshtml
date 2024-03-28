@@ -29,7 +29,37 @@
         <hr />
         <table>
 
+
+<table>
+    <thead>
+        <tr>
+            <th></th>
+            <th>Class_ID</th>
+            <th>Name</th>
+						<th>Status</th>
+						
+            <th>Semester</th>
+            <th>phone_number</th>
+            <th>type</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var course in Model.Courses)
+        {
             <tr>
+                 <td> <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike"></td>
+                <td>@course.courseid</td> 
+                <td>@course.name</td>
+                <td>@course.status</td>
+                <td>@course.semester</td>
+               
+                <td>@course.type</td>
+                
+            </tr>
+        }
+    </tbody>
+</table>
+           <!-- <tr>
                 <th><input type="checkbox" id="vehicle1" name="vehicle1" value="Bike" onclick="toggle()"></th>
                 <th>Class Id</th>
                 <th>Professor</th>
@@ -64,7 +94,7 @@
                 <td>CS 458.PDF</td>
             </tr>
 
-            <!--  <tr>
+             <tr>
                    <td><input type="checkbox" id="vehicle1" name="vehicle1" value="Bike"></td>
                    <td>Sep 20, 2017</td>
                    <td>George hegel</td>
@@ -100,5 +130,21 @@
                    <td class="pending">Pending</td>
                </tr>-->
         </table>
+
+
+ 
     </section>
+     
+<div id="backgroundcolor">
+        <h2>Question Statistics</h2>
+        <p>Questions Count:</p>
+    <p>Type of questions:</p> <!--Ive done some research and it is possible to do a pie chart.-->
+    <p>Chatbot helpfulness Score:</p> <!--this would be a percent score based on user feedback.-->
+
+
+
+    <p></p>
+
+        
+</div>
 </body>
