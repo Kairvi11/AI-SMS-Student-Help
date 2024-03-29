@@ -1,0 +1,30 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+<div class="index-background-container">
+    <header>
+        <!-- Header content goes here -->
+    </header>
+    <div class="login-card">
+        <div class="title">USI Chatbot Solution</div>
+        <form>
+            <div class="form-group">
+                <label for="username" class="text-dark">Username</label>
+                <input type="text" class="form-control" id="username" placeholder="Enter username">
+            </div>
+            <div class="form-group">
+                <label for="password" class="text-dark">Password</label>
+                <input type="password" class="form-control" id="password" placeholder="Enter password">
+            </div>
+            <button type="submit" class="btn btn-primary">Login</button>
+            <button type="button" class="forgot-password-button">Forgot Password?</button>
+            <div class="create-account-text">Don't have an account? <a asp-page="/Privacy">Create one</a>.</div>
+        </form>
+    </div>
+    <footer>
+        <!-- Footer content goes here -->
+
+    </footer>
+</div>
