@@ -4,11 +4,23 @@
     ViewData["Title"] = "Upload Documents";
 }
 <head>
-	<link rel="stylesheet" type="text/css" href="~/css/UploadDocument.css">
+    <link rel="stylesheet" type="text/css" href="~/css/UploadDocument.css">
+    <link rel="stylesheet" type="text/css" href="~/css/AddClass.css">
 </head>
+<div class="sidebar">
+    <button class="my-account">My Account</button>
+    <button class="my-classes">My Classes</button>
+</div>
 <div class="container">
     <h2 class="my-4 text-center">Upload Documents</h2>
     <form method="post" enctype="multipart/form-data" class="needs-validation" novalidate>
+        <div class="form-group">
+            <label for="courseId" class="form-label">Course ID:</label>
+            <input type="text" name="courseId" id="courseId" class="form-control" required>
+            <div class="invalid-feedback">
+                Please enter a course ID.
+            </div>
+        </div>
         <div class="form-group">
             <label for="document" class="form-label">Select a document to upload:</label>
             <div class="dropzone-container">
