@@ -43,7 +43,7 @@ namespace AI_SMS_Student_Help.Pages
 
         public async Task<IActionResult> OnGetAsync()
         {
-            string connectionString = "DefaultEndpointsProtocol=https;AccountName=aismschatbot;AccountKey=lv3AB/ySWQ/iy3uDJw504AV/vrqAeo+7qNs37kH7QU7+rDu66ELoKBecLJcW2ji5vVhsmsOAe+M5+AStBMEBgQ==;EndpointSuffix=core.windows.net";
+            string connectionString = "<insert connection string here>";
             TableServiceClient tableServiceClient = new TableServiceClient(connectionString);
             TableClient tableClient = tableServiceClient.GetTableClient("courses");
 
