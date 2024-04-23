@@ -1,0 +1,74 @@
+﻿@page
+@model AI_SMS_Student_Help.Pages.AddClassModel
+@{
+}
+
+<html lang="en">
+<head>
+    <title>Add a Class</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" type="text/css" href="~/css/AddClass.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.3/dist/jquery.validate.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery-validation-unobtrusive@3.2.11/dist/jquery.validate.unobtrusive.min.js"></script>
+</head>
+<body>
+    <div class="sidebar">
+        <button class="my-account">My Account</button>
+        <button class="my-classes">My Classes</button>
+    </div>
+    <form method="post">
+        <div class="form-group">
+            <label for="CourseId" class="control-label">Course ID</label>
+            <input type="text" id="CourseId" name="CourseId" class="form-control" required>
+            <span asp-validation-for="CourseId" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label for="CourseName" class="control-label">Course Name</label><input type="text" id="CourseName" name="CourseName" class="form-control" required>
+            <span asp-validation-for="CourseName" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label for="Semester" class="control-label">Semester</label>
+            <input type="text" id="Semester" name="Semester" class="form-control" required>
+            <span asp-validation-for="Semester" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label for="TaughtBy" class="control-label">Taught By</label>
+            <input type="text" id="TaughtBy" name="TaughtBy" class="form-control" required>
+            <span asp-validation-for="TaughtBy" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label for="Type" class="control-label">Type</label>
+            <select id="Type" name="Type" class="form-control" required asp-for="Type">
+                <option value="">Select an option</option>
+                <option value="online">Online</option>
+                <option value="in-person">In Person</option>
+                <option value="hybrid">Hybrid</option>
+            </select>
+            <span asp-validation-for="Type" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label for="Status" class="control-label">Status</label>
+            <select id="Status" name="Status" class="form-control" required asp-for="Status">
+                <option value="">Select an option</option>
+                <option value="active">Active</option>
+                <option value="inactive">Inactive</option>
+            </select>
+            <span asp-validation-for="Status" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <input type="submit" value="Submit" class="btn btn-primary">
+            <a asp-page="/UploadDocument" class="btn btn-secondary">Upload Document</a>
+        </div>
+    </form>
+    @if (TempData["Message"] != null)
+    {
+        <div class="alert alert-success">
+            @TempData["Message"]
+        </div>
+    }
+    </div>
+    </div>
+    </div>
+</body>
+</html>
+             

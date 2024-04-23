@@ -1,0 +1,70 @@
+﻿@page
+@model AI_SMS_Student_Help.Pages.UploadDocumentModel
+@{
+    ViewData["Title"] = "Upload Documents";
+}
+<head>
+    <link rel="stylesheet" type="text/css" href="~/css/UploadDocument.css">
+    <link rel="stylesheet" type="text/css" href="~/css/AddClass.css">
+</head>
+<div class="sidebar">
+    <button class="my-account">My Account</button>
+    <button class="my-classes">My Classes</button>
+</div>
+<div class="container">
+    <h2 class="my-4 text-center">Upload Documents</h2>
+    <form method="post" enctype="multipart/form-data" class="needs-validation" novalidate>
+        <div class="form-group">
+            <label for="courseId" class="form-label">Course ID:</label>
+            <input type="text" name="courseId" id="courseId" class="form-control" required>
+            <div class="invalid-feedback">
+                Please enter a course ID.
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="document" class="form-label">Select a document to upload:</label>
+            <div class="dropzone-container">
+                <div class="dropzone rounded border border-secondary p-3 d-flex flex-column align-items-center" id="dropzone">
+                    <input type="file" name="document" id="document" class="form-control d-none" required>
+                    <p class="mb-0 browse-text">Browse</p>
+                </div>
+                <p class="drop-text">Drop files here or</p>
+            </div>
+            <div class="invalid-feedback">
+                Please select a document to upload.
+            </div>
+        </div>
+        <button type="submit" class="btn btn-primary center-button mt-3">Upload</button>
+    </form>
+    @if (ViewData["Message"] != null)
+    {
+        <div class="alert alert-success mt-4">@ViewData["Message"]</div>
+    }
+</div>
+
+@section Scripts {
+    <script>
+        document.querySelector('.dropzone').addEventListener('dragover', function (e) {
+            e.preventDefault();
+            e.dataTransfer.dropEffect = 'copy';
+        });
+
+        document.querySelector('.dropzone').addEventListener('drop', function (e) {
+            e.preventDefault();
+            document.querySelector('#document').files = e.dataTransfer.files;
+        });
+
+        document.querySelector('#document').addEventListener('change', function (e) {
+            if (e.target.files.length > 0) {
+                document.querySelector('.dropzone').classList.add('border', 'border-success');
+            } else {
+                document.querySelector('.dropzone').classList.remove('border', 'border-success');
+            }
+        });
+
+        document.querySelector('.browse-text').addEventListener('click', function (e) {
+            e.preventDefault();
+            document.querySelector('#document').click();
+        });
+    </script>
+}

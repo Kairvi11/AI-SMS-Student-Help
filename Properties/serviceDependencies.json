@@ -1,0 +1,17 @@
+{
+  "dependencies": {
+    "storage1": {
+      "type": "storage",
+      "connectionId": "chatbotblob"
+    },
+    "mssql1": {
+      "type": "mssql",
+      "connectionId": "chatbot",
+      "dynamicId": null
+    },
+    "secrets1": {
+      "type": "secrets",
+      "connectionId": null
+    }
+  }
+}

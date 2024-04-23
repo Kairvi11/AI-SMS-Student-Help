@@ -5,10 +5,26 @@
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
     <RootNamespace>AI_SMS_Student_Help</RootNamespace>
+    <UserSecretsId>1ec11a0b-9823-4a1d-b680-f44f2db8ccf3</UserSecretsId>
   </PropertyGroup>
 
   <ItemGroup>
     <Folder Include="View\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Azure.Data.Tables" Version="12.8.3" />
+    <PackageReference Include="Azure.Storage.Blobs" Version="12.13.1" />
+    <PackageReference Include="Azure.Storage.Common" Version="12.19.0-beta.1" />
+    <PackageReference Include="Azure.Storage.Files.Shares" Version="12.1.0" />
+    <PackageReference Include="Azure.Storage.Queues" Version="12.11.1" />
+    <PackageReference Include="ElCamino.Azure.Data.Tables" Version="8.0.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="8.0.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="8.0.0">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.Extensions.Azure" Version="1.7.2" />
   </ItemGroup>
 
 </Project>

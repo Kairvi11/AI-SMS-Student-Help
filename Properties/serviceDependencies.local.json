@@ -1,0 +1,25 @@
+{
+  "dependencies": {
+    "storage1": {
+      "serviceConnectorResourceId": "/subscriptions/[parameters('subscriptionId')]/resourceGroups/[parameters('resourceGroupName')]/providers/Microsoft.ServiceLinker/locations/eastus/connectors/chatbotblob_B419D4D98C",
+      "secretStore": "LocalSecretsFile",
+      "resourceId": "/subscriptions/[parameters('subscriptionId')]/resourceGroups/[parameters('resourceGroupName')]/providers/Microsoft.Storage/storageAccounts/aismschatbot",
+      "type": "storage.azure",
+      "connectionId": "chatbotblob"
+    },
+    "mssql1": {
+      "serviceConnectorResourceId": "/subscriptions/[parameters('subscriptionId')]/resourceGroups/[parameters('resourceGroupName')]/providers/Microsoft.ServiceLinker/locations/eastus/connectors/chatbot_F08CBD5411",
+      "secretStore": "LocalSecretsFile",
+      "resourceId": "/subscriptions/[parameters('subscriptionId')]/resourceGroups/[parameters('resourceGroupName')]/providers/Microsoft.Sql/servers/usifalc/databases/Chatbot",
+      "type": "mssql.azure",
+      "connectionId": "chatbot",
+      "dynamicId": null
+    },
+    "secrets1": {
+      "secretStore": null,
+      "resourceId": null,
+      "type": "secrets.user",
+      "connectionId": null
+    }
+  }
+}
